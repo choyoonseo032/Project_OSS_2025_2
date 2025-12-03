@@ -48,5 +48,22 @@ class Calculator:
         self.entry.delete(0, tk.END)
         self.entry.insert(tk.END, self.expression)
 
+def calculate_sqrt_function():
+    # 코드의 유일성을 위해 변수명(input_val, output_result) 등을 본인 스타일로 변경하세요.
+    try:
+        input_val = float(input("제곱근을 구할 양의 숫자 (N)를 입력하세요: "))
+        
+        if input_val < 0:
+            print("--- 오류 ---")
+            print("제곱근은 양수에 대해서만 계산 가능합니다.")
+            return
+
+        output_result = math.sqrt(input_val)
+        print(f"N = {input_val} 의 제곱근은 {output_result} 입니다.")
+
+    except ValueError:
+        print("--- 오류 ---")
+        print("숫자 형식으로 입력해야 합니다.")
+
 
 
