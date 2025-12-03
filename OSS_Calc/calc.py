@@ -49,7 +49,6 @@ class Calculator:
         self.entry.insert(tk.END, self.expression)
 
 def calculate_sqrt_function():
-    # 코드의 유일성을 위해 변수명(input_val, output_result) 등을 본인 스타일로 변경하세요.
     try:
         input_val = float(input("제곱근을 구할 양의 숫자 (N)를 입력하세요: "))
         
