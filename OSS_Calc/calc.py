@@ -20,7 +20,7 @@ class Calculator:
             ['4', '5', '6', '*'],
             ['1', '2', '3', '-'],
             ['0', '.', 'C', '+'],
-            ['=']
+            ['=', 'S']
         ]
 
         for row in buttons:
@@ -43,7 +43,8 @@ class Calculator:
                 self.expression = str(eval(self.expression))
             except Exception:
                 self.expression = "에러"
-        else:
+        elif char == 'S':
+        try:
             self.expression += str(char)
 
         self.entry.delete(0, tk.END)
